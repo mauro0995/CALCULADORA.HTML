@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<script src="calculadora-instalacion_script.js" defer></script>
+<link rel="stylesheet" href="calculadora-instalacion_style.css" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calculadora_retorno</title>
+</head>
+<body>
+  <header class="top_section">
+    <img src="Logotipo NetFox Naranja Positivo.png" alt="Placeholder Image" class="header_image">
+    <label class="header_label">Calculadora de Retorno de Inversion</label>
+  </header>
+  <section class="mid_section">
+    <div class="tooltip_info_style" id="tooltip_info"></div>
+    <div class="input_group">
+      <label class="info_style" element_info_data="Costo de la Factura mensual">Costo de Factura:</label>
+      <input id="bill_input" type="number" value=300000>
+      <label class="info_style" element_info_data="Aumento anual en la rentabilidad" style="margin-top: 1vh;">Aumento(%):</label>
+      <input id="increase_input" type="number" value=5>
+    </div>
+    <div class="input_group">
+      <label  class="info_style" element_info_data="Numero de años para el que se mostrara informacion" >Numero de Años:</label>
+      <input id="year_input" type="number" value=20>
+      <label class="info_style" element_info_data="Costo total de la tramitacon e instalacion" style="margin-top: 1vh;">Costo Tramite:</label>
+      <input id="cost_input" type="number" value=6000000>
+    </div>
+    <button id="calculate_button" class="calculate_button" onclick="onclick_calculate_button('bill_input', 'year_input', 'increase_input', 'cost_input')">Calcular</button>
+  </section>
+  <div id="bottom_section_group" class="bottom_section" style="display: none;">
+    <div class="left_content" style="min-width: 400px; width:90vw; background-color: white; border-radius: 0.5em;">
+      <div class="graph_wrapper">
+        <div class="y_axis" id="graph_y_axis"></div>
+        <div class="graph_scroll_wrapper">
+          <div class="graph_container">
+            <div class="graph_scroll">
+              <div class="graph" id="progression_graph"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right_content">
+      <div >                                               
+      <div >
+          <table id="data_table">
+              <thead>
+                  <tr>
+                  <th id="test_data_header_name" >Año</th>
+                  <th id="test_data_header_status">Capital</th>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+        </div> 
+    </div>
+  </div>
+</body>
+</html>
